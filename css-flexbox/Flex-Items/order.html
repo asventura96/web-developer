@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Order</title>
+
+    <style>
+        .titulo{
+            display: flex;
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subtitulo{
+            display: flex;
+            color: white;
+            background-color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .descricao{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        .item{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: violet;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            flex: 1;
+        }
+        
+        .o1{
+            order: 1;
+        }
+
+        .o2{
+            order: 2;
+        }
+
+        .o3{
+            order: 3;
+        }
+
+        .o4{
+            order: 4;
+        }
+
+        .o5{
+            order: 5;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Order</h1>
+    <p class="descricao">Esta propriedade vai lidar diretamente com a ordenação dos itens.</p>
+
+    <h4 class="descricao">Order = 0</h4>
+    <div class="flex-container">
+        <div class="item">10</div>
+        <div class="item">50</div>
+        <div class="item">5</div>
+        <div class="item">100</div>
+        <div class="item">222</div>
+    </div>
+
+    <h4 class="descricao">Order = 0</h4>
+    <div class="flex-container">
+        <div class="item o2">10</div>
+        <div class="item o3">50</div>
+        <div class="item o1">5</div>
+        <div class="item o4">100</div>
+        <div class="item o5">222</div>
+    </div>
+</body>
+</html>

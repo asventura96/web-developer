@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Shrink</title>
+
+    <style>
+        .titulo{
+            display: flex;
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subtitulo{
+            display: flex;
+            color: white;
+            background-color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .descricao{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+        }
+
+        .item{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            background-color: green;
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .s-0{
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .s-1{
+            flex-shrink: 1;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Flex Shrink</h1>
+    <p class="descricao">É uma propriedade que estabelece a capacidade de redução ou compressão do tamanho de um item.</p>
+
+    <h4 class="descricao">Flex Shrink: 1</h4>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">Cachorro</div>
+        <div class="item s-1 fg-1">Gato</div>
+        <div class="item s-1 fg-1">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item s-1 fg-1">Avestruz</div>
+        <div class="item s-1 fg-1">Pato</div>
+    </div>
+
+    <h4 class="descricao">Flex Shrink: 0; Basis: 100px</h4>
+    <div class="flex-container">
+        <div class="item s-0 fg-1">Cachorro</div>
+        <div class="item s-0 fg-1">Gato</div>
+        <div class="item s-0 fg-1">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item s-0 fg-1">Avestruz</div>
+        <div class="item s-0 fg-1">Pato</div>
+    </div>
+</body>
+</html>

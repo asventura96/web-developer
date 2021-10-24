@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Basis</title>
+
+    <style>
+        .titulo{
+            display: flex;
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subtitulo{
+            display: flex;
+            color: white;
+            background-color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .descricao{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container{
+            max-width: 700px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: red;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+        .bauto{
+            flex-basis: auto;
+        }
+
+        .b0{
+            flex-basis: 0;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+        .w100{
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Flex Basis</h1>
+    <p class="descricao">É a propriedade que estabelece o tamanho inicial dos itens antes da distribuição de espaço restante dentro dele, usando como base o conteúdo interno disposto.</p>
+
+    <h4 class="descricao">Basis: auto</h4>
+    <div class="flex-container">
+        <div class="item bauto fg-1">123</div>
+        <div class="item bauto fg-1">246810</div>
+        <div class="item bauto fg-1">36912151821</div>
+        <div class="item bauto fg-2">481620242832</div>
+    </div>
+
+    <h4 class="descricao">Basis: 0</h4>
+    <div class="flex-container">
+        <div class="item b0 fg-1">123</div>
+        <div class="item b0 fg-1">246810</div>
+        <div class="item b0 fg-1">36912151821</div>
+        <div class="item b0 fg-1">481620242832</div>
+    </div>
+
+    <h4 class="descricao">Basis + width</h4>
+    <div class="flex-container">
+        <div class="item w100 fg-2">123</div>
+        <div class="item w100 fg-2">246810</div>
+        <div class="item w100 fg-2">36912151821</div>
+        <div class="item w100 fg-2">481620242832</div>
+    </div>
+</body>
+</html>

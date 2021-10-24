@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align Self</title>
+
+    <style>
+        .titulo{
+            display: flex;
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subtitulo{
+            display: flex;
+            color: white;
+            background-color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .descricao{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 600px;
+            margin-bottom: 10px;
+        }
+        .item{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: blue;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Align Self</h1>
+    <p class="descricao">É a propriedade que estabelece o alinhamento de modo individual sobre um determinado item.</p>
+
+    <h2 class="subtitulo">Flex-direction: row</h2>
+    <h4 class="descricao">align-self: auto</h4>
+    <section class="flex-container">
+        <div class="item auto">Cachorro</div>
+        <div class="item auto">Gato</div>
+        <div class="item auto">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item auto">Hipopótamo</div>
+        <div class="item auto">Tartaruga</div>
+    </section>
+
+    <h4 class="descricao">align-self: baseline</h4>
+    <section class="flex-container">
+        <div class="item baseline">Cachorro</div>
+        <div class="item baseline">Gato</div>
+        <div class="item baseline">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item baseline">Hipopótamo</div>
+        <div class="item baseline">Tartaruga</div>
+    </section>
+
+    <h4 class="descricao">align-self: center</h4>
+    <section class="flex-container">
+        <div class="item center">Cachorro</div>
+        <div class="item center">Gato</div>
+        <div class="item center">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item center">Hipopótamo</div>
+        <div class="item center">Tartaruga</div>
+    </section>
+
+    <h4 class="descricao">align-self: start e end</h4>
+    <section class="flex-container">
+        <div class="item start">Cachorro</div>
+        <div class="item start">Gato</div>
+        <div class="item start">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item end">Hipopótamo</div>
+        <div class="item end">Tartaruga</div>
+    </section>
+
+    <h4 class="descricao">align-self: stretch</h4>
+    <section class="flex-container">
+        <div class="item stretch">Cachorro</div>
+        <div class="item stretch">Gato</div>
+        <div class="item stretch">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item stretch">Hipopótamo</div>
+        <div class="item stretch">Tartaruga</div>
+    </section>
+
+
+    <h2 class="subtitulo">Flex-direction: column</h2>
+    <h4 class="descricao">align-self: auto</h4>
+    <section class="flex-container column">
+        <div class="item auto">Cachorro</div>
+        <div class="item auto">Gato</div>
+        <div class="item auto">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item auto">Hipopótamo</div>
+        <div class="item auto">Tartaruga</div>
+    </section>
+
+    <h4 class="descricao">align-self: baseline</h4>
+    <section class="flex-container column">
+        <div class="item baseline">Cachorro</div>
+        <div class="item baseline">Gato</div>
+        <div class="item baseline">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item baseline">Hipopótamo</div>
+        <div class="item baseline">Tartaruga</div>
+    </section>
+
+    <h4 class="descricao">align-self: center</h4>
+    <section class="flex-container column">
+        <div class="item center">Cachorro</div>
+        <div class="item center">Gato</div>
+        <div class="item center">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item center">Hipopótamo</div>
+        <div class="item center">Tartaruga</div>
+    </section>
+
+    <h4 class="descricao">align-self: start e end</h4>
+    <section class="flex-container column">
+        <div class="item start">Cachorro</div>
+        <div class="item start">Gato</div>
+        <div class="item start">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item end">Hipopótamo</div>
+        <div class="item end">Tartaruga</div>
+    </section>
+
+    <h4 class="descricao">align-self: stretch</h4>
+    <section class="flex-container column">
+        <div class="item stretch">Cachorro</div>
+        <div class="item stretch">Gato</div>
+        <div class="item stretch">O rato roeu a roupa do rei de Roma.</div>
+        <div class="item stretch">Hipopótamo</div>
+        <div class="item stretch">Tartaruga</div>
+    </section>
+</body>
+</html>

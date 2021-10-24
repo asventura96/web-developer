@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex</title>
+
+    <style>
+        .titulo{
+            display: flex;
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subtitulo{
+            display: flex;
+            color: white;
+            background-color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .descricao{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+        }
+        .item{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .flex-1{
+            flex: 1;
+            /* Grow=1; Shrink=1; Basis=0 */
+            background-color: blueviolet;
+        }
+
+        .flex-2{
+            flex: 2;
+            /* Grow=2; Shrink=1; Basis=0 */
+            background-color: brown;
+        }
+
+        .flex-2-1-1{
+            flex: 2 1 1;
+            /* Grow=2; Shrink=1; Basis=0 */
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Flex</h1>
+    <p class="descricao">Esta propriedade é um atalho ou abreviação de escrita para as propriedades: <i>grow</i>, <i>shrink</i> e <i>basis</i> respectivamente.</p>
+
+    <h4 class="descricao">Flex: 1</h4>
+    <div class="flex-container">
+        <div class="item flex-1">Cachorro</div>
+        <div class="item flex-1">Gato</div>
+        <div class="item flex-1">Cavalo</div>
+        <div class="item flex-1">Hipopótamo</div>
+        <div class="item flex-1">Pato</div>
+    </div>
+
+    <h4 class="descricao">Flex: 2</h4>
+    <div class="flex-container">
+        <div class="item flex-2">Cachorro</div>
+        <div class="item flex-1">Gato</div>
+        <div class="item flex-2">Cavalo</div>
+        <div class="item flex-1">Hipopótamo</div>
+        <div class="item flex-2-1-1">Pato</div>
+    </div>
+</body>
+</html>

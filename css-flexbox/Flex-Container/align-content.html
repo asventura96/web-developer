@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align Content</title>
+
+    <style>
+        .titulo{
+            display: flex;
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subtitulo{
+            display: flex;
+            color: white;
+            background-color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .descricao{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container{
+            height: 400px;
+            max-width: 500px;
+            margin: 0 auto;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: red;
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+        }
+        .stretch{
+            align-content: stretch;
+        }
+        .center{
+            align-content: center;
+        }
+        .flex-start{
+            align-content: flex-start;
+        }
+
+        .flex-end{
+            align-content: flex-end;
+        }
+
+        .space-around{
+            align-content: space-around;
+        }
+
+        .space-between{
+            align-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Align Content</h1>
+    <p class="descricao">É a propriedade responsável por tratar o alinhamento das linhas do container em relação ao eixo vertical do container.</p>
+    <p class="descricao">Precisamos que:</p>
+    <li class="descricao">O container utilize quebras de linhas;</li>
+    <li class="descricao">A altura do container seja maior que a soma das linhas dos itens.</li>
+
+    <h4 class="descricao">Stretch</h4>
+    <div class="container stretch">
+        <div class="item">Num ninho de mafagafos há sete mafagafinhos. Quando a mafagafa gafa, gafam os sete mafagafinhos.</div>
+        <div class="item">Trazei três pratos de trigo para três tigres tristes comerem.</div>
+        <div class="item">A aranha arranha a rã. A rã arranha a aranha. Nem a aranha arranha a rã. Nem a rã arranha a aranha.</div>
+        <div class="item">A Iara agarra e amarra a rara arara de Araraquara.</div>
+        <div class="item">Sabendo o que sei e sabendo o que sabes e o que não sabes e o que não sabemos, ambos saberemos se somos sábios, sabidos ou simplesmente saberemos se somos sabedores.</div>
+        <div class="item">Chega de cheiro de cera suja.</div>
+    </div>
+
+    <h4 class="descricao">Center</h4>
+    <div class="container center">
+        <div class="item">Num ninho de mafagafos há sete mafagafinhos. Quando a mafagafa gafa, gafam os sete mafagafinhos.</div>
+        <div class="item">Trazei três pratos de trigo para três tigres tristes comerem.</div>
+        <div class="item">A aranha arranha a rã. A rã arranha a aranha. Nem a aranha arranha a rã. Nem a rã arranha a aranha.</div>
+        <div class="item">A Iara agarra e amarra a rara arara de Araraquara.</div>
+        <div class="item">Sabendo o que sei e sabendo o que sabes e o que não sabes e o que não sabemos, ambos saberemos se somos sábios, sabidos ou simplesmente saberemos se somos sabedores.</div>
+        <div class="item">Chega de cheiro de cera suja.</div>
+    </div>
+
+    <h4 class="descricao">Flex-Start</h4>
+    <div class="container flex-start">
+        <div class="item">Num ninho de mafagafos há sete mafagafinhos. Quando a mafagafa gafa, gafam os sete mafagafinhos.</div>
+        <div class="item">Trazei três pratos de trigo para três tigres tristes comerem.</div>
+        <div class="item">A aranha arranha a rã. A rã arranha a aranha. Nem a aranha arranha a rã. Nem a rã arranha a aranha.</div>
+        <div class="item">A Iara agarra e amarra a rara arara de Araraquara.</div>
+        <div class="item">Sabendo o que sei e sabendo o que sabes e o que não sabes e o que não sabemos, ambos saberemos se somos sábios, sabidos ou simplesmente saberemos se somos sabedores.</div>
+        <div class="item">Chega de cheiro de cera suja.</div>
+    </div>
+
+    <h4 class="descricao">Flex-End</h4>
+    <div class="container flex-end">
+        <div class="item">Num ninho de mafagafos há sete mafagafinhos. Quando a mafagafa gafa, gafam os sete mafagafinhos.</div>
+        <div class="item">Trazei três pratos de trigo para três tigres tristes comerem.</div>
+        <div class="item">A aranha arranha a rã. A rã arranha a aranha. Nem a aranha arranha a rã. Nem a rã arranha a aranha.</div>
+        <div class="item">A Iara agarra e amarra a rara arara de Araraquara.</div>
+        <div class="item">Sabendo o que sei e sabendo o que sabes e o que não sabes e o que não sabemos, ambos saberemos se somos sábios, sabidos ou simplesmente saberemos se somos sabedores.</div>
+        <div class="item">Chega de cheiro de cera suja.</div>
+    </div>
+
+    <h4 class="descricao">Space-Around</h4>
+    <div class="container space-around">
+        <div class="item">Num ninho de mafagafos há sete mafagafinhos. Quando a mafagafa gafa, gafam os sete mafagafinhos.</div>
+        <div class="item">Trazei três pratos de trigo para três tigres tristes comerem.</div>
+        <div class="item">A aranha arranha a rã. A rã arranha a aranha. Nem a aranha arranha a rã. Nem a rã arranha a aranha.</div>
+        <div class="item">A Iara agarra e amarra a rara arara de Araraquara.</div>
+        <div class="item">Sabendo o que sei e sabendo o que sabes e o que não sabes e o que não sabemos, ambos saberemos se somos sábios, sabidos ou simplesmente saberemos se somos sabedores.</div>
+        <div class="item">Chega de cheiro de cera suja.</div>
+    </div>
+
+    <h4 class="descricao">Space-Between</h4>
+    <div class="container space-between">
+        <div class="item">Num ninho de mafagafos há sete mafagafinhos. Quando a mafagafa gafa, gafam os sete mafagafinhos.</div>
+        <div class="item">Trazei três pratos de trigo para três tigres tristes comerem.</div>
+        <div class="item">A aranha arranha a rã. A rã arranha a aranha. Nem a aranha arranha a rã. Nem a rã arranha a aranha.</div>
+        <div class="item">A Iara agarra e amarra a rara arara de Araraquara.</div>
+        <div class="item">Sabendo o que sei e sabendo o que sabes e o que não sabes e o que não sabemos, ambos saberemos se somos sábios, sabidos ou simplesmente saberemos se somos sabedores.</div>
+        <div class="item">Chega de cheiro de cera suja.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Grow</title>
+
+    <style>
+        .titulo{
+            display: flex;
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .subtitulo{
+            display: flex;
+            color: white;
+            background-color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .descricao{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container{
+            display: flex;
+            border: 2px solid black;
+            max-width: 500px;
+        }
+
+        .item{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: blue;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .fg-0{
+            flex-grow: 0;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+        .fg-5{
+            flex-grow: 5;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Flex Grow</h1>
+    <p class="descricao">Define a proporcionalidade de crescimento dos itens, respeitando o tamanho de seus conteúdos internos.</p>
+    <p class="descricao"><b>Obs.:</b>Essa propriedade não irá funcionar caso tenhamos adicionado justify-content ao nosso flex container.</p>
+
+    <h4 class="descricao">Flex-Grow: 0</h4>
+    <div class="flex-container">
+        <div class="item fg-0">Cachorro</div>
+        <div class="item fg-0">2</div>
+        <div class="item fg-0">3</div>
+        <div class="item fg-0">4</div>
+    </div>
+
+    <h4 class="descricao">Flex-Grow: 1</h4>
+    <div class="flex-container">
+        <div class="item fg-1">Cachorro</div>
+        <div class="item fg-0">2</div>
+        <div class="item fg-1">3</div>
+        <div class="item fg-0">4</div>
+    </div>
+
+    <h4 class="descricao">Flex-Grow: 2</h4>
+    <div class="flex-container">
+        <div class="item fg-2">Cachorro</div>
+        <div class="item fg-0">2</div>
+        <div class="item fg-2">3</div>
+        <div class="item fg-0">4</div>
+    </div>
+
+    <h4 class="descricao">Flex-Grow: 5</h4>
+    <div class="flex-container">
+        <div class="item fg-5">Cachorro</div>
+        <div class="item fg-0">2</div>
+        <div class="item fg-0">3</div>
+        <div class="item fg-0">4</div>
+    </div>
+</body>
+</html>

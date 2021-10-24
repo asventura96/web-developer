@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Wrap</title>
+
+    <style>
+        .titulo{
+            display: flex;
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .descricao{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container{
+            display: flex;
+            height: 150px;
+            border: 2px solid black;
+            max-width: 300px;
+            flex-direction: row;
+        }
+        .item{
+            font-size: 24px;
+            height: 50%;
+            text-align: center;
+            min-width: 100px;
+            line-height: 50px;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+
+        .wrap{
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+
+        .blue{
+            background-color: blue;
+            color: white;
+        }
+
+        .red{
+            background-color: red;
+            color: white;
+        }
+
+        .purple{
+            background-color: purple;
+            color: white;
+        }
+        .green{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Flex-Wrap</h1>
+    <p class="descricao">É a propriedade que define se os itens devem ou não quebrar de linha.</p>
+    <p class="descricao">Por padrão, eles não quebram linhas, isso faz com que os flex itens sejam compactados além do limite do conteúdo.</p>
+
+    <h2 class="descricao">No Wrap</h2>
+    <div class="flex-container nowrap">
+        <div class="item blue">1</div>
+        <div class="item red">2</div>
+        <div class="item purple">3</div>
+        <div class="item green">4</div>
+    </div>
+
+    <h2 class="descricao">Wrap</h2>
+    <div class="flex-container wrap">
+        <div class="item blue">1</div>
+        <div class="item red">2</div>
+        <div class="item green">3</div>
+        <div class="item purple">4</div>
+    </div>
+
+    <h2 class="descricao">Wrap Reverse</h2>
+    <div class="flex-container wrap-reverse">
+        <div class="item blue">1</div>
+        <div class="item red">2</div>
+        <div class="item green">3</div>
+        <div class="item purple">4</div>
+    </div>
+</body>
+</html>
